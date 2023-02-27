@@ -1,0 +1,96 @@
+.full{
+    width: 60%;
+    background-color: aliceblue;
+    border: 1px solid grey;
+    padding: 20px;
+}
+
+.friendsLinks{
+    display: flex ;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.friendsLinks span{
+    border: 1px solid grey;
+    padding: 2px ;
+    font-size: 10px;
+    color: grey;
+    border-radius: 5px;
+}
+
+.oneFriend{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid grey;
+    margin: 20px 0px;
+}
+
+.oneFriend:hover{
+    box-shadow: 7px 7px 7px grey;
+}
+
+.duopart{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.duopart img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
+
+.friendsButton{
+    display: flex;
+    gap: 5px;
+}
+
+.friendsButton button{
+    background-color: plum;
+    padding: 10px;
+    outline: none;
+    border: 0cap;
+}
+
+.part3{
+    width: 15%;
+    background-color: aliceblue;
+    border: 1px solid grey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.follower{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+ .follower img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
+
+.followername{
+    display: grid;
+    gap: 10px;
+}
+.followername button{
+    background: none;
+    outline: none;
+    border: 0cap;
+    color: purple;
+}
