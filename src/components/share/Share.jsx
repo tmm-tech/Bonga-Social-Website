@@ -1,7 +1,7 @@
 import React from "react";
 import "./share.css";
-
 import { PermMedia,PlayCircleFilledOutlined, Label, Room, EmojiEmotions } from "@mui/icons-material";
+import TagIcon from "../tagIcon/TagIcon";
 
 const Share = () => {
     return (
@@ -37,6 +37,7 @@ const Share = () => {
                         </div>
                         <div className="shareOption">
                             <Label className="shareIcon" id="tag" />
+                            <TagIcon/>
                             <span className="shareOptionText">Tag</span>
                         </div>
                         <div className="shareOption">
