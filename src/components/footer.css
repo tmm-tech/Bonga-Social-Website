@@ -1,0 +1,144 @@
+.footerContainer{
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 70px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+}
+  
+.logo-icon img{
+    margin-bottom: 15px;
+}
+
+.footerLeftLogo{
+    width: 150px;
+    height: 150px;
+}
+.footerLeftList, .footerRightList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footerLeftListItem, .footerRightListItem, .footerBtnItemText{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footerListItemText, .footerRightListItemText{
+    margin-left: 10px;
+}
+.footerLeftIcon, .footerRightIcon, .footerBtnIcon{
+    margin-right: 15px;
+}
+.section1{
+    padding-left: 20px;
+    padding-right: 30px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.sectiona p{
+    margin-bottom: 15px;
+}
+.sectiona ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+  
+.sectiona ul>li{
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+  
+.sectiona ul>li a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    font-weight: 100;
+    text-transform: capitalize;
+    transition: .2s ease-in;
+}
+.sectionb{
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    background-color: white;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+}
+  
+.section {
+    max-width: 25%;
+  
+}
+  
+.section h5 {
+    margin-bottom: 30px;
+    margin-top: 15px;
+    color:black;
+    font-size: 13px;
+    background-color:white;
+    text-transform: uppercase;
+}
+  
+.section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+  
+.section ul>li {
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+  
+.section ul>li button{
+    width: 180px;
+    height: 35px;
+   
+}
+.section ul>li i{
+    color: black;
+}
+  
+.section ul>li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color: black;
+    font-weight: 100;
+    text-transform: capitalize;
+    transition: .2s ease-in;
+    
+}
+  
+.section ul>li a:hover{
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-shadow: #E5D1FA;
+    border-bottom: 2px solid #AD7BE9;
+  
+}
+
+.appBtn{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-around;  
+}
+
+.footerBtnItemText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+  
