@@ -19,7 +19,7 @@ const Friends = () => {
         </div>
       </div>
       
-      <Notify />
+      
     </div>
   );
 }

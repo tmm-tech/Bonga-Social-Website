@@ -1,8 +1,8 @@
 .full{
     width: 100%;
-    border: 1px solid grey;
+    border: 1px solid #674188;
     padding: 20px;
-    background-color: rgb(243, 234, 243);
+    background-color: #FFFBF5;
     border-radius: 10px;
 }
 *{
@@ -16,7 +16,7 @@
 }
 
 .friendsLinks span{
-    border: 1px solid grey;
+    border: 1px solid #674188;
     padding: 2px ;
     font-size: 10px;
     color: grey;
@@ -29,7 +29,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid grey;
+    border: 1px solid #674188;
     margin: 20px 0px;
     border-radius: 10px;
 
@@ -49,7 +49,7 @@
 .duopart img{
     width: 70px;
     height: 70px;
-    border: 1px solid grey;
+    border: 1px solid #674188;
     border-radius: 50%;
 }
 
@@ -67,9 +67,9 @@
 
 .part3{
     width: 80%;
-    background-color: rgb(243, 234, 243);
+    background-color: #FFFBF5;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 1px solid #674188;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -86,7 +86,6 @@
  .follower img{
     width: 50px;
     height: 50px;
-    border: 1px solid grey;
     border-radius: 50%;
 }
 
@@ -102,24 +101,26 @@
 }
 
 .fullyNotify{
-    width: 70%;
-    background-color: aliceblue;
+    width: 100%;
+    background-color: #FFFBF5;
     padding: 20px;
-    border: 1px solid grey;
+    border: 1px solid #674188;
     display: grid;
-    gap: 15px
+    gap: 15px;
+    border-radius: 10px;
 }
 
 .oneNotification{
     display: flex;
     gap: 20px;
-    border: 1px solid grey;
+    border: 1px solid #674188;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .oneNotification img{
     width: 40px;
     height: 40px;
-    border: 1px solid grey;
     border-radius: 50%;
 }
 .shortcuts{

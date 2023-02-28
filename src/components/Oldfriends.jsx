@@ -1,5 +1,6 @@
-// import profilePic from '/public/assets/person/5.jpeg'
+
 import '../friends.css';
+import { Users } from '../dummyData';
 
 const Oldfriends = () => {
   return (
@@ -10,58 +11,21 @@ const Oldfriends = () => {
           <p>My Friends <span> 56 </span></p>
           <p>Frirend Request <span> 67 </span></p>
         </div>
-        <div className="oneFriend">
-          <div className="duopart">
-            <img src='../public/assets/person/5.jpeg' alt="pro" srcset="" />
+        {Users.map((person) => {
+          return <div className="oneFriend">
+              <div className="duopart">
+            <img src={process.env.PUBLIC_URL + person.profilePicture} alt="pro" srcset="" />
             <div className="profiledetails">
-              <h3>Persons Name</h3>
+              <h3>{person.username}</h3>
               <p>career</p>
             </div>
           </div>
           <div className="friendsButton">
-            <button>unfriend</button>
-            <button>add friend</button>
+            <button>Unfriend</button>
+            <button>Message</button>
           </div>
-        </div>
-        <div className="oneFriend">
-          <div className="duopart">
-            <img src='../public/assets/person/5.jpeg' alt="pro" srcset="" />
-            <div className="profiledetails">
-              <h3>Persons Name</h3>
-              <p>career</p>
-            </div>
           </div>
-          <div className="friendsButton">
-            <button>unfriend</button>
-            <button>add friend</button>
-          </div>
-        </div>
-        <div className="oneFriend">
-          <div className="duopart">
-            <img src='../public/assets/person/5.jpeg' alt="pro" srcset="" />
-            <div className="profiledetails">
-              <h3>Persons Name</h3>
-              <p>career</p>
-            </div>
-          </div>
-          <div className="friendsButton">
-            <button>unfriend</button>
-            <button>add friend</button>
-          </div>
-        </div>
-        <div className="oneFriend">
-          <div className="duopart">
-            <img src='../public/assets/person/5.jpeg' alt="pro" srcset="" />
-            <div className="profiledetails">
-              <h3>Persons Name</h3>
-              <p>career</p>
-            </div>
-          </div>
-          <div className="friendsButton">
-            <button>unfriend</button>
-            <button>add friend</button>
-          </div>
-        </div>
+        })}
 
       </div>
 
