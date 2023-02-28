@@ -18,7 +18,7 @@ const Friends = () => {
           <Followers />
         </div>
       </div>
-      <Followers />
+      
       <Notify />
     </div>
   );
