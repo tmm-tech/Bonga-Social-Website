@@ -1,8 +1,9 @@
 .full{
     width: 100%;
-    background-color: aliceblue;
     border: 1px solid grey;
     padding: 20px;
+    background-color: rgb(243, 234, 243);
+    border-radius: 10px;
 }
 *{
     box-sizing: border-box;
@@ -30,6 +31,8 @@
     padding: 10px;
     border: 1px solid grey;
     margin: 20px 0px;
+    border-radius: 10px;
+
 }
 
 .oneFriend:hover{
@@ -64,7 +67,8 @@
 
 .part3{
     width: 80%;
-    background-color: aliceblue;
+    background-color: rgb(243, 234, 243);
+    border-radius: 10px;
     border: 1px solid grey;
     padding: 20px;
     display: flex;
