@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Login from './login/Login'
+import Login from './pages/login/Login.jsx';
 function App() {
   return (
     <div className="App">
