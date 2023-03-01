@@ -2,6 +2,8 @@ import Followers from "../components/followers";
 import OtherHeader from "../components/OtherHeader";
 import Shortcuts from "../components/Shortcuts";
 import Videogrid from "../components/Videogrid";
+import '../friends.css';
+
 
 const Videos = () => {
     return (

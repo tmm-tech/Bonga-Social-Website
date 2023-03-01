@@ -138,3 +138,52 @@ export const Users = [
       comment: 12,
     },
   ];
+  export const Videos = [
+    {
+      id: 1,
+      title: "Introduction to JavaScript",
+      link: "https://www.youtube.com/embed/hdI2bqOjy3c"
+    },
+    {
+      id: 2,
+      title: "Learn React in 30 Minutes",
+      link: "https://www.youtube.com/embed/XxVg_s8xAms"
+    },
+    {
+      id: 3,
+      title: "Mastering CSS Grid",
+      link: "https://www.youtube.com/embed/7kVeCqQCxlk"
+    },
+    {
+      id: 4,
+      title: "Getting Started with Node.js",
+      link: "https://www.youtube.com/embed/RF5_MPSNAtU"
+    },
+    {
+      id: 5,
+      title: "JavaScript Best Practices",
+      link: "https://www.youtube.com/embed/1Jj-8lJd5j8"
+    },
+    {
+      id: 6,
+      title: "Python for Data Science",
+      link: "https://www.youtube.com/embed/-KfD70GwMN4"
+    },
+    {
+      id: 7,
+      title: "How to Build a Web App with Django",
+      link: "https://www.youtube.com/embed/F5mRW0jo-U4"
+    },
+    {
+      id: 8,
+      title: "React Native Tutorial",
+      link: "https://www.youtube.com/embed/Hf4MJH0jDb4"
+    },
+    {
+      id: 9,
+      title: "Building a RESTful API with Express.js",
+      link: "https://www.youtube.com/embed/pKd0Rpw7O48"
+    },
+   
+  ];
+  
