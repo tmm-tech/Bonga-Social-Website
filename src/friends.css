@@ -1,6 +1,6 @@
 .full{
     width: 100%;
-    border: 1px solid #674188;
+    border: 1px solid #F7EFE5;
     padding: 20px;
     background-color: #FFFBF5;
     border-radius: 10px;
@@ -8,28 +8,31 @@
 *{
     box-sizing: border-box;
 }
-.friendsLinks{
+.allfriendslinks{
     display: flex ;
     flex-direction: row;
     gap: 20px;
     align-items: center;
 }
 
-.friendsLinks span{
-    border: 1px solid #674188;
+.allfriendslinks span{
+    border: 1px solid #F7EFE5;
     padding: 2px ;
     font-size: 10px;
     color: grey;
     border-radius: 5px;
+    text-decoration: none;
 }
-
+link{
+    text-decoration: none;
+}
 .oneFriend{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid #674188;
+    border: 1px solid #F7EFE5;
     margin: 20px 0px;
     border-radius: 10px;
 
@@ -49,7 +52,7 @@
 .duopart img{
     width: 70px;
     height: 70px;
-    border: 1px solid #674188;
+    border: 1px solid #F7EFE5;
     border-radius: 50%;
 }
 
@@ -66,10 +69,10 @@
 }
 
 .part3{
-    width: 80%;
+    width: 90%;
     background-color: #FFFBF5;
     border-radius: 10px;
-    border: 1px solid #674188;
+    border: 1px solid #F7EFE5;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -104,7 +107,7 @@
     width: 100%;
     background-color: #FFFBF5;
     padding: 20px;
-    border: 1px solid #674188;
+    border: 1px solid #F7EFE5;
     display: grid;
     gap: 15px;
     border-radius: 10px;
@@ -113,7 +116,7 @@
 .oneNotification{
     display: flex;
     gap: 20px;
-    border: 1px solid #674188;
+    border: 1px solid #F7EFE5;
     padding: 15px;
     border-radius: 10px;
 }
@@ -131,7 +134,8 @@
 
 .maincontainer{
     display: grid;
-    gap: 10px;
+    gap: 20px;
+    width: 100%;
 }
 
 .cont1{

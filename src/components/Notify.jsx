@@ -5,7 +5,7 @@ import '../friends.css';
 function Notify() {
   return (
     <div className='fullyNotify'>
-      <h3>All Notifacation</h3>
+      <h3>All Notification</h3>
       {Posts.map((onePost) => {
         
         return  <div className="oneNotification">
