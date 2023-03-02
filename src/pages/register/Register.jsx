@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable jsx-a11y/alt-text */
 import React,{useState} from 'react'
 import '../login/login.css';
 import '../login/utils.css';
@@ -6,7 +8,12 @@ function Register({onSwitch}) {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [confirmpassword,setConfirmPassword]=useState("");
+    const [image, setImage] = useState(null);
 
+    const handleImageSelect = (event) => {
+      const selectedImage = event.target.files[0];
+      setImage(URL.createObjectURL(selectedImage));
+    };
     const handleEmail= (event)=>{
         setEmail(event.target.value);
     }
@@ -24,7 +31,28 @@ function Register({onSwitch}) {
     }
   return (
         <form className="login100-form validate-form" id='signup' onSubmit={handleSubmit}>
-            <span className="login100-form-title p-b-43 signup100">
+              <div className="profile-image-container signup100">
+                    <div className="profile-image">
+                      {image ? (
+                        <img src={image} alt="profile" />
+                      ) : (
+                        <i className="fas fa-user-circle fa-7x"></i>
+                      )}
+                      <div className="camera-icon">
+                        <label htmlFor="file-input">
+                          <i className="fas fa-camera fa-lg"></i>
+                        </label>
+                        <input
+                          id="file-input"
+                          type="file"
+                          accept="image/*"
+                          onChange={handleImageSelect}
+                        />
+                      </div>
+                    </div>
+              </div>
+            <br/>
+            <span className="login100-form-title p-b-43">
               Create Account ?
             </span>
             <div

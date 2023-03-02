@@ -17,7 +17,7 @@ function Login({onSwitch}) {
   }
   return (
           <form className="login100-form validate-form" id='login' onSubmit={handleSubmit}>
-            <span className="login100-form-title p-b-43">
+            <span className="login100-form-title p-b-43 login100">
               Login to continue
             </span>
             <div
