@@ -1,6 +1,23 @@
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+
 /*---------------------------------------------*/
 
 a {
+    font-family: Poppins-Regular;
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -17,7 +34,7 @@ a:focus {
 
 a:hover {
     text-decoration: none;
-    color: #A459D1;
+    color: #6675df;
 }
 
 
@@ -152,11 +169,11 @@ iframe {
 
 
 /*//////////////////////////////////////////////////////////////////
-  [ utility ]*/
+[ utility ]*/
 
 
 /*==================================================================
-  [ Text ]*/
+[ Text ]*/
 
 .txt1 {
     font-family: Montserrat-Regular;
@@ -174,7 +191,7 @@ iframe {
 
 
 /*==================================================================
-  [ Size ]*/
+[ Size ]*/
 
 .size1 {
     width: 355px;
@@ -185,14 +202,70 @@ iframe {
     width: calc(100% - 43px);
 }
 
+
+/*==================================================================
+[ Background ]*/
+
+.bg1 {
+    background: #3b5998;
+}
+
+.bg2 {
+    background: #1da1f2;
+}
+
+.bg3 {
+    background: #cd201f;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+.wrap-login100 {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row-reverse;
+}
+
+
+/*==================================================================
+[ login more ]*/
+
 .login100-more {
-    width: calc(100% - 500px);
+    width: calc(100% - 560px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 1;
-    transition: 0.5s ease-in-out;
 }
 
 .login100-more::before {
@@ -209,10 +282,10 @@ iframe {
 
 
 /*==================================================================
-  [ Form ]*/
+[ Form ]*/
 
 .login100-form {
-    width: 500px;
+    width: 560px;
     min-height: 100vh;
     display: block;
     background-color: #f7f7f7;
@@ -225,14 +298,13 @@ iframe {
     font-family: Poppins-Regular;
     font-size: 30px;
     color: #333333;
-    cursor: pointer;
     line-height: 1.2;
     text-align: center;
 }
 
 
 /*------------------------------------------------------------------
-  [ Input ]*/
+[ Input ]*/
 
 .wrap-input100 {
     display: -webkit-box;
@@ -353,7 +425,7 @@ input.input100 {
 
 
 /*==================================================================
-  [ Restyle Checkbox ]*/
+[ Restyle Checkbox ]*/
 
 .input-checkbox100 {
     display: none;
@@ -403,7 +475,7 @@ input.input100 {
 
 
 /*------------------------------------------------------------------
-  [ Button ]*/
+[ Button ]*/
 
 .container-login100-form-btn {
     width: 100%;
@@ -428,7 +500,7 @@ input.input100 {
     width: 100%;
     height: 50px;
     border-radius: 10px;
-    background: #A459D1;
+    background: #6675df;
     font-family: Montserrat-Bold;
     font-size: 12px;
     color: #fff;
@@ -442,12 +514,12 @@ input.input100 {
 }
 
 .login100-form-btn:hover {
-    background: #8c3cbb;
+    background: #333333;
 }
 
 
 /*------------------------------------------------------------------
-  [ Responsive ]*/
+[ Responsive ]*/
 
 @media (max-width: 992px) {
     .login100-form {
@@ -479,14 +551,14 @@ input.input100 {
 
 
 /*------------------------------------------------------------------
-  [ Alert validate ]*/
+[ Alert validate ]*/
 
 .validate-input {
     position: relative;
 }
 
 .alert-validate::before {
-    content: "eror";
+    content: attr(data-validate);
     position: absolute;
     z-index: 100;
     max-width: 70%;
@@ -502,6 +574,7 @@ input.input100 {
     transform: translateY(-50%);
     right: 12px;
     pointer-events: none;
+    font-family: Poppins-Regular;
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
@@ -545,25 +618,31 @@ input.input100 {
 
 
 /*==================================================================
-  [ Signup ]*/
+[ Social ]*/
 
-.signup {
-    text-align: center;
-    width: 100%;
-    font-size: 24px;
+.login100-form-social-item {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 50%;
 }
 
-input[type="file"] {
-    border: 2px solid #ccc;
-    padding: 10px;
-    font-size: 16px;
-    font-family: sans-serif;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.login100-form-social-item:hover {
+    background: #333333;
+    color: #fff;
+}
+#login {
+    display: block;
+}
+#register{
+    display:none;
 }
 
-.login100 {
-    margin-top: -100px;
-    margin-bottom: -35px;
+.slide-left {
+    transform: translateX(-100%);
 }
 
+.slide-right {
+    transform: translateX(100%);
+}

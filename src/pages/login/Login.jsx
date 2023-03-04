@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React,{useState} from 'react';
-import './login.css';
-import './utils.css';
+import '../Authentication/authentication.css';
+import '../Authentication/utils.css';
 function Login({onSwitch}) {
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
+  const [errors, setErrors] = useState({});
 
   const handleEmail= (event)=>{
  setEmail(event.target.value);
@@ -12,9 +13,31 @@ function Login({onSwitch}) {
   const handlePassword= (ev)=>{
     setPassword(ev.target.value);
   }
-  const handleSubmit=(evt)=>{
+  const handleSubmit = (evt) => {
     evt.preventDefault();
-  }
+    let errors = {};
+
+    // Validate email
+    if (!email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Email is invalid";
+    }
+  
+    // Validate password
+    if (!password) {
+      errors.password = "Password is required";
+    } else if (password.length < 8) {
+      errors.password = "Password must be at least 8 characters long";
+    }
+  
+    if (Object.keys(errors).length === 0) {
+      // call the login API or dispatch the login action here
+    } else {
+      setErrors(errors);
+    }
+  };
+  
   return (
           <form className="login100-form validate-form" id='login' onSubmit={handleSubmit}>
             <span className="login100-form-title p-b-43 login100">
@@ -22,7 +45,7 @@ function Login({onSwitch}) {
             </span>
             <div
               className="wrap-input100 validate-input"
-              data-validate="Valid email is required: ex@abc.xyz"
+              data-validate={errors.email}
             >
               <input className="input100" type="text" name="email" value={email} onChange={handleEmail}/>
               <span className="focus-input100"></span>
@@ -30,7 +53,7 @@ function Login({onSwitch}) {
             </div>
             <div
               className="wrap-input100 validate-input"
-              data-validate="Password is required"
+              data-validate={errors.password}
             >
               <input className="input100" type="password" name="pass"  value={password} onChange={handlePassword}/>
               <span className="focus-input100"></span>
