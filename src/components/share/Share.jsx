@@ -1,9 +1,26 @@
-import React from "react";
+import { React, useState } from "react";
 import "./share.css";
-import { PermMedia,PlayCircleFilledOutlined, Label, Room, EmojiEmotions } from "@mui/icons-material";
+import { PermMedia, PlayCircleFilledOutlined, Label, Room, EmojiEmotions } from "@mui/icons-material";
 import TagIcon from "../tagIcon/TagIcon";
+//import { Picker } from "emoji-mart";
+
 
 const Share = () => {
+    const [location, setLocation] = useState({});
+
+    navigator.geolocation.getCurrentPosition(
+        function (position) {
+            setLocation({
+                latitude: -0.39434075,
+                longitude: 36.96318525
+            });
+        },
+        function (error) {
+            // Handle location retrieval error
+            console.error(error);
+        }
+    );
+
     return (
         <div className="share">
             <div className="shareWrapper">
@@ -37,15 +54,16 @@ const Share = () => {
                         </div>
                         <div className="shareOption">
                             <Label className="shareIcon" id="tag" />
-                            <TagIcon/>
+                            <TagIcon />
                             <span className="shareOptionText">Tag</span>
                         </div>
                         <div className="shareOption">
-                            <Room className="shareIcon" id="location" />
+                            <Room className="shareIcon" id="location"  />
                             <span className="shareOptionText">Location</span>
                         </div>
                         <div className="shareOption">
                             <EmojiEmotions className="shareIcon" id="feelings" />
+
                             <span className="shareOptionText">Feelings</span>
                         </div>
                     </div>

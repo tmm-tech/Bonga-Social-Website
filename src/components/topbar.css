@@ -58,6 +58,9 @@
     position: relative;
 }
 
+.notification-container{
+    position: relative;
+}
 .topbarIconBadge{
     width: 15px;
     height: 15px;

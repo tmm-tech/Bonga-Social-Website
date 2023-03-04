@@ -41,7 +41,7 @@ const Sidebar = () => {
                     <li className="sidebarListItem">
                         <Logout className="sidebarIcon"/>
                         <span className="sidebarListItemText">Log out</span>
-                    </li> 
+                    </li>  
                 </ul>
                 <button className="sidebarButton">Show More</button>
                 <hr className="sidebarHr"/>
