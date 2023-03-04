@@ -1,7 +1,7 @@
 import React,{useState,useEffect}from 'react'
 import Login from '../login/Login';
-import '../login/login.css';
-import '../login/utils.css';
+import './authentication.css';
+import './utils.css';
 import Register from '../register/Register';
 function Authentication() {
     const [currentImage,setCurrentImage]=useState(0);
