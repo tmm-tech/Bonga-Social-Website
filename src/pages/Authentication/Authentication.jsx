@@ -34,9 +34,10 @@ function Authentication() {
       <div className="container-login100">
         <div className="wrap-login100">
 		{showLogin ? (
-            <Login onSwitch={handleCreateAccount}/>
+			<Register onSwitch={handleLogin}/>
+           
             ):(
-            <Register onSwitch={handleLogin}/>
+             <Login onSwitch={handleCreateAccount}/>
             )}
 
           <div

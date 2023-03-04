@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/alt-text */
 import React,{useState,useRef} from 'react'
-import '../Authentication/authentication.css'
-import '../Authentication/utils.css'
+import './styles.css'
+import './utils.css'
+
 function Register({onSwitch}) {
     const [image, setImage] = useState(null);
     const [formData, setFormData] = useState({
@@ -167,6 +168,9 @@ function Register({onSwitch}) {
   
   return (
         <form className="login100-form validate-form" id='signup' onSubmit={handleSubmit}>
+              <span className="login100-form-title p-b-43">
+                Register to Continue
+              </span>
               <div className="profile-image-container signup100">
                     <div className="profile-image">
                       {image ? (
@@ -188,9 +192,6 @@ function Register({onSwitch}) {
                     </div>
               </div>
             <br/>
-            <span className="login100-form-title p-b-43">
-              Register to Continue
-            </span>
             <div
               className={`wrap-input100 validate-input ${formErrors.fullName ? 'alert-validate' : 'has-valid-input'}`}
               data-validate={formErrors.fullname}
@@ -246,7 +247,7 @@ function Register({onSwitch}) {
             <div className="text-center p-t-46 p-b-20">
               <span className="txt2">or sign in</span>
             </div>
-            <div class="login100-form-social flex-c-m" onClick={onSwitch}>
+            <div className="login100-form-social flex-c-m" onClick={onSwitch}>
                <span>Already have an Account?</span>  
             </div>
           </form>

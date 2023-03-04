@@ -571,11 +571,11 @@ input.input100 {
 }
 
 #login {
-    display: block;
+    display: none;
 }
 
 #signup {
-    display: none;
+    display: block;
 }
 
 .slide-left {
@@ -584,4 +584,55 @@ input.input100 {
 
 .slide-right {
     transform: translateX(100%);
+}
+
+
+/************************************************************************************
+                        PROFILE IMAGE DESIGN
+************************************************************************************/
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-image i {
+    font-size: 200px;
+    color: #c2c2c2;
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.camera-icon i {
+    font-size: 25px;
+    color: #A459D1;
+    cursor: pointer;
+}
+
+#file-input {
+    display: none;
 }
