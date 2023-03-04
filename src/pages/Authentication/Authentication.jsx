@@ -1,10 +1,10 @@
-import React,{useState,useEffect}from 'react'
-import Login from '../login/Login';
+import React,{useState,useEffect} from 'react'
 import './authentication.css';
+import Login from './Login';
+import Register from './Register';
 import './utils.css';
-import Register from '../register/Register';
 function Authentication() {
-    const [currentImage,setCurrentImage]=useState(0);
+	const [currentImage,setCurrentImage]=useState(0);
     const [showLogin, setShowLogin]=useState(true);
     const handleCreateAccount = ()=>{
         setShowLogin(false);
@@ -29,21 +29,24 @@ function Authentication() {
     return () => clearInterval(intervalId);
   }, [images.length]);
   return (
+	<div className="Container">
     <div className="limiter">
       <div className="container-login100">
         <div className="wrap-login100">
-            {showLogin ? (
+		{showLogin ? (
             <Login onSwitch={handleCreateAccount}/>
             ):(
             <Register onSwitch={handleLogin}/>
             )}
+
           <div
             className="login100-more"
-            style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(202, 136, 136, 0.4)),url(${images[currentImage]})`  }}>
+            style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(202, 136, 136, 0.4)),url(${images[currentImage]})`}}>
             </div>
         </div>
       </div>
       </div>
+	  </div>
   );
 }
 
