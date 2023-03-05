@@ -57,7 +57,9 @@
     cursor: pointer;
     position: relative;
 }
-
+.chats-container{
+    position: relative;
+}
 .notification-container{
     position: relative;
 }

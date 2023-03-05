@@ -32,7 +32,7 @@
     position: absolute;
     top: 40px;
     right: 0;
-    width: 300px;
+    width: 350px;
     max-height: 400px;
     overflow: auto;
     background-color: #fff;
@@ -62,8 +62,24 @@
     color: #f00;
 }
 
-.notification-message .message-text {
+.notification-message {
+    display: flex;
+    justify-content: flex-start;
     flex-grow: 1;
     font-size: 14px;
     color: #555;
+    
+}
+
+.message-text {
+    flex-grow: 1;
+    font-size: 15px;
+    color: #555;
+    margin: 0 10px;
+}
+
+.time-posted {
+    flex-grow: 1;
+    font-size: 10px;
+    margin: 0 10px;
 }

@@ -3,18 +3,20 @@ import "./topbar.css";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import NotificationBox from "./NotificationBox";
+import { notifications, chats } from "../dummyData";
+import MessageBox from "./MessageBox";
+
 
 const Topbar = () => {
     const [showNotifications, setShowNotifications] = useState(false);
 
-    const notifications = [
-        { id: 1, message: 'New message from John' },
-        { id: 2, message: 'New event starting in 1 hour' },
-        { id: 3, message: 'You have a new friend request' },
-    ];
+    const [showMessages, setshowMessages] = useState(false);
 
     function handleClick() {
         setShowNotifications(!showNotifications);
+    }
+    function handleClickOpen() {
+        setshowMessages(!showMessages);
     }
 
     return (
@@ -39,8 +41,16 @@ const Topbar = () => {
                         <span className="topbarIconBadge">1</span>
                     </div>
                     <div className="topbarIconItem">
-                        <Chat />
-                        <span className="topbarIconBadge">1</span>
+                        <div className="chats-container">
+                            <IconButton onClick={handleClickOpen}>
+                                <Chat />
+                                <span className="topbarIconBadge">{chats.length}</span>
+                            </IconButton>
+                            {showMessages && (
+                                <MessageBox chats={chats}/>
+                            )}
+
+                        </div>
                     </div>
                     <div className="topbarIconItem">
                         <div className="notification-container">
@@ -49,7 +59,7 @@ const Topbar = () => {
                                 <span className="topbarIconBadge">{notifications.length}</span>
                             </IconButton>
                             {showNotifications && (
-                                <NotificationBox notifications={notifications}/>
+                                <NotificationBox notifications={notifications} />
                             )}
                         </div>
                     </div>
