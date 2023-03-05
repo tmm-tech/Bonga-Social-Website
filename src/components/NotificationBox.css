@@ -2,18 +2,6 @@
     position: relative;
 }
 
-.notification-icon {
-    position: relative;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.notification-icon i {
-    font-size: 24px;
-    color: #555;
-}
 
 .notification-count {
     position: absolute;
@@ -32,7 +20,7 @@
     position: absolute;
     top: 40px;
     right: 0;
-    width: 350px;
+    width: 250px;
     max-height: 400px;
     overflow: auto;
     background-color: #fff;
@@ -46,40 +34,29 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    color: #555;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 .notification-message {
+    display: flex;
+    justify-content: flex-start;   
+}
+
+.notification-messageLeft {
     display: flex;
     align-items: center;
-    padding: 10px;
-}
-
-.notification-message i {
-    margin-right: 10px;
-    font-size: 8px;
-    color: #f00;
-}
-
-.notification-message {
-    display: flex;
-    justify-content: flex-start;
-    flex-grow: 1;
-    font-size: 14px;
-    color: #555;
-    
+    color: black;
+    margin-left: 10px;
 }
 
 .message-text {
-    flex-grow: 1;
     font-size: 15px;
-    color: #555;
-    margin: 0 10px;
+    font-weight: 300;
+    margin: 10px 10px;
 }
 
 .time-posted {
-    flex-grow: 1;
-    font-size: 10px;
-    margin: 0 10px;
+    font-size: 12px;
+    margin: 10px 10px;
 }

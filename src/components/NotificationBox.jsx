@@ -9,12 +9,13 @@ function NotificationBox({ notifications }) {
       <h3 className="notification-header">Notifications</h3>
       {notifications.map((notification) => (
         <div key={notification.id} className="notification-message">
-          {notification.icon}
-          <p>
-            <span className="message-text">{notification.message}</span>
-            <span className="time-posted">{notification.date}</span>
-          </p>
-
+          <div className="notification-messageLeft">
+            {notification.icon}
+          </div>
+          <div className="notification-messageRight">
+            <p className="message-text">{notification.message} </p>
+            <p className="time-posted">{notification.date}</p>
+          </div>
         </div>
       ))}
     </div>
