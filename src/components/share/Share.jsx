@@ -1,25 +1,16 @@
 import { React, useState } from "react";
 import "./share.css";
 import { PermMedia, PlayCircleFilledOutlined, Label, Room, EmojiEmotions } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 import TagIcon from "../tagIcon/TagIcon";
-//import { Picker } from "emoji-mart";
 
 
 const Share = () => {
-    const [location, setLocation] = useState({});
+    const [showTaggedFriends, setshowTaggedFriends] = useState(false);
 
-    navigator.geolocation.getCurrentPosition(
-        function (position) {
-            setLocation({
-                latitude: -0.39434075,
-                longitude: 36.96318525
-            });
-        },
-        function (error) {
-            // Handle location retrieval error
-            console.error(error);
-        }
-    );
+    function handleClickOpenTaggedFriends() {
+        setshowTaggedFriends(!showTaggedFriends);
+    }
 
     return (
         <div className="share">
@@ -38,8 +29,7 @@ const Share = () => {
                             <PermMedia className="shareIcon" id="photo" />
                             <label className="fileContainer">
                                 <input type="file" />
-                                <span className="shareOptionText">
-                                    Photo</span>
+                                <span className="shareOptionText">Photo</span>
                             </label>
 
                         </div>
@@ -47,18 +37,21 @@ const Share = () => {
                             <PlayCircleFilledOutlined className="shareIcon" id="video" />
                             <label className="fileContainer">
                                 <input type="file" />
-                                <span className="shareOptionText">
-                                    Video</span>
+                                <span className="shareOptionText">Video</span>
                             </label>
 
                         </div>
                         <div className="shareOption">
-                            <Label className="shareIcon" id="tag" />
-                            <TagIcon />
-                            <span className="shareOptionText">Tag</span>
+                            <IconButton onClick={handleClickOpenTaggedFriends}>
+                                <Label className="shareIcon" id="tag" />
+                                <span className="shareOptionText">Tag</span>
+                            </IconButton>
+                            {showTaggedFriends && (
+                                <TagIcon />
+                            )}
                         </div>
                         <div className="shareOption">
-                            <Room className="shareIcon" id="location"  />
+                            <Room className="shareIcon" id="location" />
                             <span className="shareOptionText">Location</span>
                         </div>
                         <div className="shareOption">

@@ -109,3 +109,7 @@
     cursor: pointer;
     color: white;
 }
+
+.tagContainer {
+    position: relative;
+}

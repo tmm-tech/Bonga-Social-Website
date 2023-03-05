@@ -1,0 +1,47 @@
+.tag-box {
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    max-height: 400px;
+    overflow: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 999;
+}
+
+.tag-header {
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.tagWrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.tagWrapperLeft {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profilePicture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.tagFriendName {
+    font-size: 12px;
+}
