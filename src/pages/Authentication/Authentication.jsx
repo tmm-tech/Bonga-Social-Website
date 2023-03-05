@@ -31,23 +31,24 @@ function Authentication() {
     }, 5000);
     return () => clearInterval(intervalId);
   }, [images.length]);
-  const loginClassName = `login-form${showLogin ? ' show' : ' hide'}`;
-  const registerClassName = `login-form${showLogin ? ' hide' : ' show'}`;
+  const loginClassName = `form-slide ${showLogin ? 'slide-enter' : 'slide-exit'}`;
+  const registerClassName = `form-slide ${showLogin ? 'slide-exit' : 'slide-enter'}`;
   return (
 	<div className="Container">
     <div className="limiter">
       <div className="container-login100">
         <div className="wrap-login100">
-	
-		<div className={loginClassName}>
-              <Login onCreateAccountClick={handleCreateAccountClick} />
+		<div className="form-container">
+              <div className="form-content">
+                <div className={loginClassName}>
+                  <Login onCreateAccountClick={handleCreateAccountClick} />
+                </div>
+                <div className={registerClassName}>
+                  <Register onAlreadyHaveAccountClick={handleAlreadyHaveAccountClick} />
+                </div>
+              </div>
             </div>
-            <div className={registerClassName}>
-              <Register onAlreadyHaveAccountClick={handleAlreadyHaveAccountClick} />
-            </div>
-
-          <div
-            className="login100-more"
+           <div className="login100-more"
             style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(202, 136, 136, 0.4)),url(${images[currentImage]})`}}>
             </div>
         </div>
