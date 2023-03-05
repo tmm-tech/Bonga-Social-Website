@@ -106,10 +106,14 @@
     background-color: green;
     font-weight: 500;
     margin-right: 20px;
-    cursor: pointer;
     color: white;
 }
 
+.shareButton:hover{
+    cursor: pointer;
+    background-color:lightseagreen;
+    color: #d8d8d8;
+}
 .tagContainer {
     position: relative;
 }
