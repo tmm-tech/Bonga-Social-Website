@@ -5,13 +5,16 @@ import Register from './Register';
 import './utils.css';
 function Authentication() {
 	const [currentImage,setCurrentImage]=useState(0);
-    const [showLogin, setShowLogin]=useState(true);
-    const handleCreateAccount = ()=>{
-        setShowLogin(false);
-    };
-    const handleLogin =  ()=>{
-        setShowLogin(true);
-    }
+	const [showLogin, setShowLogin] = useState(true);
+
+	const handleCreateAccountClick = () => {
+	  setShowLogin(false);
+	};
+  
+	const handleAlreadyHaveAccountClick = () => {
+	  setShowLogin(true);
+	};
+  
     const images = [
     'assets/background/sara-kurfess-6lcT2kRPvnI-unsplash.jpg',
     'assets/background/jakob-owens-WUmb_eBrpjs-unsplash.jpg',
@@ -28,17 +31,20 @@ function Authentication() {
     }, 5000);
     return () => clearInterval(intervalId);
   }, [images.length]);
+  const loginClassName = `login-form${showLogin ? ' show' : ' hide'}`;
+  const registerClassName = `login-form${showLogin ? ' hide' : ' show'}`;
   return (
 	<div className="Container">
     <div className="limiter">
       <div className="container-login100">
         <div className="wrap-login100">
-		{showLogin ? (
-			<Register onSwitch={handleLogin}/>
-           
-            ):(
-             <Login onSwitch={handleCreateAccount}/>
-            )}
+	
+		<div className={loginClassName}>
+              <Login onCreateAccountClick={handleCreateAccountClick} />
+            </div>
+            <div className={registerClassName}>
+              <Register onAlreadyHaveAccountClick={handleAlreadyHaveAccountClick} />
+            </div>
 
           <div
             className="login100-more"

@@ -4,7 +4,7 @@ import React,{useState,useRef} from 'react'
 import './styles.css'
 import './utils.css'
 
-function Register({onSwitch}) {
+function Register({onAlreadyHaveAccountClick}) {
     const [image, setImage] = useState(null);
     const [formData, setFormData] = useState({
       fullname: '',
@@ -247,7 +247,7 @@ function Register({onSwitch}) {
             <div className="text-center p-t-46 p-b-20">
               <span className="txt2">or sign in</span>
             </div>
-            <div className="login100-form-social flex-c-m" onClick={onSwitch}>
+            <div className="login100-form-social flex-c-m" onClick={onAlreadyHaveAccountClick}>
                <span>Already have an Account?</span>  
             </div>
           </form>

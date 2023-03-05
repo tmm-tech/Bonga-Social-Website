@@ -3,7 +3,7 @@
 import React,{useState,useRef} from 'react';
 import './styles.css'
 import './utils.css'
-function Login({onSwitch}) {
+function Login({onCreateAccountClick}) {
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const inputRefs = useRef([]);
@@ -110,8 +110,8 @@ function Login({onSwitch}) {
         <div className="text-center p-t-46 p-b-20">
                 <span className="txt2">or</span>
         </div>
-        <div className="login100-form-social flex-c-m">
-            <span onClick={onSwitch}>Create an Account</span>
+        <div className="login100-form-social flex-c-m" onClick={onCreateAccountClick}>
+          <span>Create an Account </span>
         </div>
       </form>
         
