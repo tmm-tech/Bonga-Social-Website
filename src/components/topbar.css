@@ -48,6 +48,11 @@
     cursor: pointer;
 }
 
+.topbarLink:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
+
 .topbarIcons{
     display: flex;  
 }
@@ -61,6 +66,10 @@
     position: relative;
 }
 .notification-container{
+    position: relative;
+}
+
+.profileContainer {
     position: relative;
 }
 .topbarIconBadge{

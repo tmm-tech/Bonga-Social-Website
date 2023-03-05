@@ -40,6 +40,10 @@
     margin-bottom: 20px;
 }
 
+.sidebarListItem:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
 .sidebarIcon{
    margin-right: 15px; 
 }

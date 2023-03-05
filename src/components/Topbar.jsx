@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./topbar.css";
-import { Search, Person, Chat, Notifications } from "@mui/icons-material";
+import { Search, Chat, Notifications } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
-import NotificationBox from "./NotificationBox";
 import { notifications, chats } from "../dummyData";
-import MessageBox from "./MessageBox";
+import NotificationBox from "./notification/NotificationBox";
+import MessageBox from "./message/MessageBox";
+import Profile from "./profile/Profile";
 
 
 const Topbar = () => {
@@ -12,11 +13,16 @@ const Topbar = () => {
 
     const [showMessages, setshowMessages] = useState(false);
 
-    function handleClick() {
+    const [showProfile, setShowProfile] = useState(false);
+
+    function handleClickOpenNotifications() {
         setShowNotifications(!showNotifications);
     }
-    function handleClickOpen() {
+    function handleClickOpenMessages() {
         setshowMessages(!showMessages);
+    }
+    function handleClickOpenProfile() {
+        setShowProfile(!showProfile);
     }
 
     return (
@@ -36,25 +42,22 @@ const Topbar = () => {
                     <span className="topbarLink">Timeline</span>
                 </div>
                 <div className="topbarIcons">
-                    <div className="topbarIconItem">
-                        <Person />
-                        <span className="topbarIconBadge">1</span>
-                    </div>
+
                     <div className="topbarIconItem">
                         <div className="chats-container">
-                            <IconButton onClick={handleClickOpen}>
+                            <IconButton onClick={handleClickOpenMessages}>
                                 <Chat />
                                 <span className="topbarIconBadge">{chats.length}</span>
                             </IconButton>
                             {showMessages && (
-                                <MessageBox chats={chats}/>
+                                <MessageBox chats={chats} />
                             )}
 
                         </div>
                     </div>
                     <div className="topbarIconItem">
                         <div className="notification-container">
-                            <IconButton onClick={handleClick}>
+                            <IconButton onClick={handleClickOpenNotifications}>
                                 <Notifications />
                                 <span className="topbarIconBadge">{notifications.length}</span>
                             </IconButton>
@@ -64,7 +67,15 @@ const Topbar = () => {
                         </div>
                     </div>
                 </div>
-                <img src="assets/person/1.jpeg" alt="" className="profilePicture" />
+                <div className="profileContainer">
+                <IconButton onClick={handleClickOpenProfile}>
+                    <img src="assets/person/1.jpeg" alt="" className="profilePicture" />
+                </IconButton>
+                {showProfile && (
+                    <Profile/>
+                )}
+                </div>
+                
             </div>
         </div >
 
