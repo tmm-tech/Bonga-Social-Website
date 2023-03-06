@@ -1,0 +1,116 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/********************************************************************
+                        LOGIN AND REGISTRATION CONTAINER
+/*******************************************************************/
+
+.Container {
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+    background-color: #666666;
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+
+/********************************************************************
+                        LOGIN AND REGISTRATION FORM CONTAINER
+/*******************************************************************/
+
+.wrap-login100 {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row-reverse;
+}
+
+
+/********************************************************************
+                        IMAGE CONTAINER
+/*******************************************************************/
+
+.login100-more {
+    width: calc(100% - 520px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.login100-more::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    position: relative;
+    height: 100%;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #f7f7f7;
+    z-index: 1;
+}
+
+.form-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-enter {
+    transform: translateX(0%);
+}
+
+.slide-exit {
+    transform: translateX(-100%);
+}
