@@ -1,11 +1,9 @@
+import React from 'react'
+import { Users } from '../dummyData'
 
-import '../friends.css';
-import { Users } from '../dummyData';
-
-const Oldfriends = () => {
+function Request() {
   return (
-    <div className="friendsCont">
-
+    <div>
 
 
       {Users.map((person) => {
@@ -18,18 +16,15 @@ const Oldfriends = () => {
             </div>
           </div>
           <div className="friendsButton">
-            <button>Unfriend</button>
-            <button>Message</button>
+            <button>Add friend</button>
+            <button>Delete request</button>
           </div>
         </div>
       })}
 
 
-
-
-
     </div>
-  );
+  )
 }
 
-export default Oldfriends;
+export default Request

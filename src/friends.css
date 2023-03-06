@@ -1,69 +1,82 @@
-.full{
-    width: 60%;
-    background-color: aliceblue;
-    border: 1px solid grey;
+.full {
+    width: 100%;
+    border: 1px solid #F7EFE5;
     padding: 20px;
+    background-color: #FFFBF5;
+    border-radius: 10px;
 }
 
-.friendsLinks{
-    display: flex ;
+* {
+    box-sizing: border-box;
+}
+
+.allfriendslinks {
+    display: flex;
     flex-direction: row;
     gap: 20px;
     align-items: center;
 }
 
-.friendsLinks span{
-    border: 1px solid grey;
-    padding: 2px ;
+.allfriendslinks span {
+    border: 1px solid #F7EFE5;
+    padding: 2px;
     font-size: 10px;
     color: grey;
     border-radius: 5px;
+    text-decoration: none;
 }
 
-.oneFriend{
+link {
+    text-decoration: none;
+}
+
+.oneFriend {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid grey;
+    border: 1px solid #F7EFE5;
     margin: 20px 0px;
+    border-radius: 10px;
+
 }
 
-.oneFriend:hover{
+.oneFriend:hover {
     box-shadow: 7px 7px 7px grey;
 }
 
-.duopart{
+.duopart {
     display: flex;
     flex-direction: row;
     gap: 20px;
     align-items: center;
 }
 
-.duopart img{
+.duopart img {
     width: 70px;
     height: 70px;
-    border: 1px solid grey;
+    border: 1px solid #F7EFE5;
     border-radius: 50%;
 }
 
-.friendsButton{
+.friendsButton {
     display: flex;
     gap: 5px;
 }
 
-.friendsButton button{
+.friendsButton button {
     background-color: plum;
     padding: 10px;
     outline: none;
     border: 0cap;
 }
 
-.part3{
-    width: 15%;
-    background-color: aliceblue;
-    border: 1px solid grey;
+.part3 {
+    width: 90%;
+    background-color: #FFFBF5;
+    border-radius: 10px;
+    border: 1px solid #F7EFE5;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -72,25 +85,181 @@
 
 
 
-.follower{
+.follower {
     display: flex;
     align-items: center;
     gap: 20px;
 }
- .follower img{
+
+.follower img {
     width: 50px;
     height: 50px;
-    border: 1px solid grey;
     border-radius: 50%;
 }
 
-.followername{
+.followername {
     display: grid;
     gap: 10px;
 }
-.followername button{
+
+.followername button {
     background: none;
     outline: none;
     border: 0cap;
     color: purple;
+}
+
+.fullyNotify {
+    width: 100%;
+    background-color: #FFFBF5;
+    padding: 20px;
+    border: 1px solid #F7EFE5;
+    display: grid;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.oneNotification {
+    display: flex;
+    gap: 20px;
+    border: 1px solid #F7EFE5;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.oneNotification img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.shortcuts {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.maincontainer {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+.cont1 {
+    grid-column: 1/2;
+}
+
+.cont2 {
+    grid-column: 2/4;
+}
+
+.cont3 {
+    grid-column: 4/5;
+}
+
+.fullheader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    background-image: url('/public/assets/posts/8.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+
+.fullheaderimage {
+    border: 10px white solid;
+    border-radius: 2px 20px 2px 20px;
+    height: 220px;
+    width: 200px;
+    overflow: hidden;
+    align-self: first baseline;
+    z-index: 9;
+    margin-left: 2%;
+    margin-bottom: -120px;
+
+}
+
+.fullheader img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.followersdeets,
+.otherheadernav,
+.friendsAdd {
+    display: flex;
+}
+
+.followersdeets {
+    justify-content: space-between;
+    align-items: center;
+    width: 82%;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.followersdeets button {
+    padding: 10px;
+    background-color: rgb(77, 71, 71);
+    color: white;
+    border: 0;
+    border-radius: 1px;
+}
+
+.friendsAdd {
+    align-items: center;
+    gap: 20px;
+}
+
+.friendsAdd button {
+    background-color: #674188;
+}
+
+.otherheadernav {
+    background-color: #F7EFE5;
+    height: 70px;
+    width: 100%;
+    padding: 10px 0px 10px 18%;
+    gap: 50px;
+}
+
+.navname {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.navname h3 {
+    font-size: 20px;
+}
+
+.navname p {
+    font-size: small;
+}
+
+.navlinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.Videogrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
