@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import Videos from './pages/Videos';
 import Oldfriends from './components/Oldfriends';
 import Request from './components/Request';
-
+import Authentication from './pages/Authentication/Authentication';
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,6 @@ function App() {
         <Route path='/notification' element={<Notification/>} ></Route>
         <Route path='/videos' element={<Videos/>} ></Route>
       </Routes>
-      
     </div>
   );
 }
